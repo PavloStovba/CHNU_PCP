@@ -9,21 +9,32 @@ public class ControllerThread extends Thread {
 
     @Override
     public void run() {
-        Thread[] stopperThreads = new Thread[threads.length];
+        long startTime = System.currentTimeMillis();
+        boolean[] stopped = new boolean[threads.length];
 
-        for (int i = 0; i < threads.length; i++) {
-            final int index = i;
+        while (true) {
+            long currentTime = System.currentTimeMillis();
+            boolean allStopped = true;
 
-            stopperThreads[i] = new Thread(() -> {
-                try {
-                    Thread.sleep(delays[index]);
-                } catch (InterruptedException e) {
-                    System.err.println("Стопер потоку #" + (index + 1) + " перерваний: " + e.getMessage());
+            for (int i = 0; i < threads.length; i++) {
+                if (!stopped[i]) {
+                    allStopped = false;
+                    if (currentTime - startTime >= delays[i]) {
+                        threads[i].stopRunning();
+                        stopped[i] = true;
+                    }
                 }
-                threads[index].stopRunning();
-            });
+            }
 
-            stopperThreads[i].start();
+            if (allStopped) {
+                break;
+            }
+
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                System.err.println("ControllerThread interrupted: " + e.getMessage());
+//            }
         }
 
         for (SumThread thread : threads) {

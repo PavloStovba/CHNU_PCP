@@ -14,8 +14,8 @@ class Program
 
         for (int i = 0; i < threadCount; i++)
         {
-            steps[i] = random.Next(1, 6);      
-            delays[i] = random.Next(1, 6) * 1000;     
+            steps[i] = random.Next(1, 6);
+            delays[i] = random.Next(1, 6) * 1000;
         }
 
         SumThread[] workers = new SumThread[threadCount];

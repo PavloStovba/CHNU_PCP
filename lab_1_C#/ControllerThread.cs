@@ -26,26 +26,32 @@ class ControllerThread
 
     private void Run()
     {
-        Thread[] stoppers = new Thread[threads.Length];
+        long startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+        bool[] stopped = new bool[threads.Length];
 
-        for (int i = 0; i < threads.Length; i++)
+        while (true)
         {
-            int index = i;
+            long currentTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            bool allStopped = true;
 
-            stoppers[i] = new Thread(() =>
+            for (int i = 0; i < threads.Length; i++)
             {
-                try
+                if (!stopped[i])
                 {
-                    Thread.Sleep(delays[index]);
-                    threads[index].StopRunning();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Стопер потоку #{index + 1} перерваний: {ex.Message}");
-                }
-            });
+                    allStopped = false;
 
-            stoppers[i].Start();
+                    if (currentTime - startTime >= delays[i])
+                    {
+                        threads[i].StopRunning();
+                        stopped[i] = true;
+                    }
+                }
+            }
+
+            if (allStopped)
+            {
+                break;
+            }
         }
 
         foreach (var t in threads)

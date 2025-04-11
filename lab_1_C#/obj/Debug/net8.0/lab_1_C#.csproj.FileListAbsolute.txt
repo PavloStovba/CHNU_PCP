@@ -12,3 +12,4 @@ D:\PCP\lab_1_C#\obj\Debug\net8.0\refint\lab_1_C#.dll
 D:\PCP\lab_1_C#\obj\Debug\net8.0\lab_1_C#.pdb
 D:\PCP\lab_1_C#\obj\Debug\net8.0\lab_1_C#.genruntimeconfig.cache
 D:\PCP\lab_1_C#\obj\Debug\net8.0\ref\lab_1_C#.dll
+D:\PCP\lab_1_C#\obj\Debug\net8.0\lab_1_C#.sourcelink.json

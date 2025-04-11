@@ -28,16 +28,24 @@ class SumThread
     {
         int current = 0;
 
+        // Запам'ятовуємо стартовий час
+        long startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+
         while (running)
         {
             sum += current;
             current += step;
             count++;
 
-            Thread.Sleep(100);
+            // Перевіряємо час на кожному кроці
+            long currentTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            if (currentTime - startTime >= 100) // Перевіряємо, чи пройшло 100 мс
+            {
+                startTime = currentTime; // Оновлюємо час
+            }
         }
 
-        Console.WriteLine($"Потiк #{id} завершено. Сума = {sum}, доданкiв = {count}");
+        Console.WriteLine($"Потiк #{id} завершено. Сума = {sum}, доданків = {count}");
     }
 
     public void StopRunning()
