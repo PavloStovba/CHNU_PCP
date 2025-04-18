@@ -1,0 +1,15 @@
+D:\PCP\Lab_2_C#\bin\Debug\net8.0\Lab_2_C#.exe
+D:\PCP\Lab_2_C#\bin\Debug\net8.0\Lab_2_C#.deps.json
+D:\PCP\Lab_2_C#\bin\Debug\net8.0\Lab_2_C#.runtimeconfig.json
+D:\PCP\Lab_2_C#\bin\Debug\net8.0\Lab_2_C#.dll
+D:\PCP\Lab_2_C#\bin\Debug\net8.0\Lab_2_C#.pdb
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.GeneratedMSBuildEditorConfig.editorconfig
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.AssemblyInfoInputs.cache
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.AssemblyInfo.cs
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.csproj.CoreCompileInputs.cache
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.sourcelink.json
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.dll
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\refint\Lab_2_C#.dll
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.pdb
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\Lab_2_C#.genruntimeconfig.cache
+D:\PCP\Lab_2_C#\obj\Debug\net8.0\ref\Lab_2_C#.dll
