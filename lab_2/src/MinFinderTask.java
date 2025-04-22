@@ -1,10 +1,15 @@
 public class MinFinderTask implements Runnable {
-    private int start, end;
-    private int totalThreads;
+    private final int[] array;
+    private final int start;
+    private final int end;
+    private final SharedState state;
+    private final int totalThreads;
 
-    public MinFinderTask(int start, int end, int totalThreads) {
+    public MinFinderTask(int[] array, int start, int end, SharedState state, int totalThreads) {
+        this.array = array;
         this.start = start;
         this.end = end;
+        this.state = state;
         this.totalThreads = totalThreads;
     }
 
@@ -14,21 +19,18 @@ public class MinFinderTask implements Runnable {
         int localMinIndex = -1;
 
         for (int i = start; i < end; i++) {
-            if (Main.array[i] < localMin) {
-                localMin = Main.array[i];
+            if (array[i] < localMin) {
+                localMin = array[i];
                 localMinIndex = i;
             }
         }
 
-        synchronized (Main.lock) {
-            if (localMin < Main.globalMin) {
-                Main.globalMin = localMin;
-                Main.globalMinIndex = localMinIndex;
-            }
+        synchronized (state.getLock()) {
+            state.updateMin(localMin, localMinIndex);
+            state.incrementCompletedThreads();
 
-            Main.completedThreads++;
-            if (Main.completedThreads == totalThreads) {
-                Main.lock.notify();  // Або notifyAll(), якщо сумніваємось
+            if (state.getCompletedThreads() == totalThreads) {
+                state.getLock().notify();
             }
         }
     }
