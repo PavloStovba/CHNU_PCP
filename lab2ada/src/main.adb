@@ -10,7 +10,7 @@ procedure Main is
    package Int_Vec is new Ada.Containers.Vectors(Index_Type, Integer);
    use Int_Vec;
 
-   A : Vector;
+   A : Vector; --прибрати вектор
 
    Array_Size   : Integer;
    Thread_Count : Integer;
@@ -50,6 +50,7 @@ procedure Main is
       Local_Min   : Integer := Integer'Last;
       Local_Index : Index_Type := Start_Index;
    begin
+   delay 10.0;
       for I in Start_Index .. End_Index loop
          if A(I) < Local_Min then
             Local_Min := A(I);
@@ -63,7 +64,6 @@ procedure Main is
    Gen : Rand_Int.Generator;
 
 begin
-   -- Ввід параметрів
    Put("Enter array size: ");
    Get(Array_Size);
    Put("Enter number of threads: ");
@@ -89,7 +89,7 @@ begin
 
    declare
       type Min_Finder_Access is access Min_Finder;
-      type Finder_Array is array (Positive range <>) of Min_Finder_Access;
+      type Finder_Array is array (Positive range <>) of Min_Finder_Access; --прибрати деклеа
       Finders : Finder_Array(1 .. Thread_Count);
 
       Part_Size : constant Integer := Array_Size / Thread_Count;
@@ -105,6 +105,7 @@ begin
             Start_Idx := End_Idx + 1;
          end;
       end loop;
+      Put_Line("!!!!!!!!!!!!!!!!!!!!!1: ");
    end;
 
    Put_Line("Minimum value: " & Integer'Image(Global_Min.Get_Min));
