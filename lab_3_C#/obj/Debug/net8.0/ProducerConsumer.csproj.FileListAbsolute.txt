@@ -1,0 +1,15 @@
+D:\PCP\lab_3_C#\bin\Debug\net8.0\ProducerConsumer.exe
+D:\PCP\lab_3_C#\bin\Debug\net8.0\ProducerConsumer.deps.json
+D:\PCP\lab_3_C#\bin\Debug\net8.0\ProducerConsumer.runtimeconfig.json
+D:\PCP\lab_3_C#\bin\Debug\net8.0\ProducerConsumer.dll
+D:\PCP\lab_3_C#\bin\Debug\net8.0\ProducerConsumer.pdb
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.GeneratedMSBuildEditorConfig.editorconfig
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.AssemblyInfoInputs.cache
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.AssemblyInfo.cs
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.csproj.CoreCompileInputs.cache
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.sourcelink.json
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.dll
+D:\PCP\lab_3_C#\obj\Debug\net8.0\refint\ProducerConsumer.dll
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.pdb
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ProducerConsumer.genruntimeconfig.cache
+D:\PCP\lab_3_C#\obj\Debug\net8.0\ref\ProducerConsumer.dll
