@@ -1,0 +1,15 @@
+D:\PCP\lab_4_C#\bin\Debug\net8.0\lab_4_C#.exe
+D:\PCP\lab_4_C#\bin\Debug\net8.0\lab_4_C#.deps.json
+D:\PCP\lab_4_C#\bin\Debug\net8.0\lab_4_C#.runtimeconfig.json
+D:\PCP\lab_4_C#\bin\Debug\net8.0\lab_4_C#.dll
+D:\PCP\lab_4_C#\bin\Debug\net8.0\lab_4_C#.pdb
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.GeneratedMSBuildEditorConfig.editorconfig
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.AssemblyInfoInputs.cache
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.AssemblyInfo.cs
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.csproj.CoreCompileInputs.cache
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.sourcelink.json
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.dll
+D:\PCP\lab_4_C#\obj\Debug\net8.0\refint\lab_4_C#.dll
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.pdb
+D:\PCP\lab_4_C#\obj\Debug\net8.0\lab_4_C#.genruntimeconfig.cache
+D:\PCP\lab_4_C#\obj\Debug\net8.0\ref\lab_4_C#.dll
